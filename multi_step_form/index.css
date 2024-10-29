@@ -3,3 +3,63 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+body {
+  background: #fff;
+  font-family: sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.form{
+  width: 98%;
+  max-width: 400px;
+}
+
+.form .header {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  gap:5px;
+}
+
+.form .header p {
+  color: #555;
+}
+
+.form .body {
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
+  border-radius:20px
+}
+
+.form .body .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+}
+
+.form .body .pagination .number {
+  background: #00acee;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 15px;
+}
+
+.form .body .pagination .bar {
+  width: 50px;
+  height: 4px;
+  background: #00acee;
+  border-radius: 5px;
+}
+
+.form .body .pagination .active ~ div {
+  background: #eee;
+  color: #111;
+}
