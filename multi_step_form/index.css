@@ -30,7 +30,9 @@ body {
 
 .form .body {
   box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
-  border-radius:20px
+  border-radius:20px;
+  height: 320px;
+  overflow: hidden;
 }
 
 .form .body .pagination {
@@ -62,4 +64,99 @@ body {
 .form .body .pagination .active ~ div {
   background: #eee;
   color: #111;
+}
+
+.form .steps {
+  width: 400%;
+  display: flex;
+}
+
+.form .steps .step {
+  width: 98vw;
+  max-width: 400px;
+  padding: 5px 15px 15px;
+  overflow: hidden;
+}
+
+.form .steps .step h4 {
+  margin-bottom: 5px;
+}
+
+.form .steps .step p {
+  color: #888;
+  max-width: 90%;
+  font-size: 15px;
+}
+
+.form .steps .step .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form .steps .step .grid .col label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.form .steps .step .grid .col input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  border-radius:  8px;
+}
+
+.form .steps .step .grid .col .checkbox input {
+  display: none;
+}
+
+.form .steps .step .grid .col .checkbox label {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .steps .step .grid .col .checkbox input:checked + label {
+  background: #00aaee;
+  color: #fff;
+}
+
+.form .steps .step .confirmation {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  gap: 10px;
+}
+
+.form .steps .step .confirmation button {
+  background: #00aaee;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.form .footer {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .footer button {
+  padding: 5px 10px;
+  font-size: 15px;
+  border: 1px solid #bbb;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 }
