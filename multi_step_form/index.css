@@ -69,6 +69,7 @@ body {
 .form .steps {
   width: 400%;
   display: flex;
+  transition: all 300ms ease-in-out;
 }
 
 .form .steps .step {
