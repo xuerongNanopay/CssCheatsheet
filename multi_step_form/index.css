@@ -26,17 +26,16 @@ body {
   background: #fff;
   width: 70%;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
   .container {
-    width: 90%;
+    width: 95%;
   }
 }
 
 .form{
   width: 100%;
   margin: 0 auto;
-  /* max-width: var(--max-form-width, 700px); */
-  /* min-width: var(--min-form-width, 375px); */
+  max-width: var(--max-form-width, 700px);
 }
 
 .form .header {
