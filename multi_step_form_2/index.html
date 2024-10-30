@@ -8,6 +8,31 @@
   <title>Multi Step Form 02</title>
 </head>
 <body>
-  
+  <form multi-step>
+    <div
+      class="card"
+      step="1"
+    >
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+    </div>
+    <div
+      class="card"
+      step="2"
+    >
+    </div>
+    <div
+      class="card"
+      step="3"
+    >
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 </body>
 </html>
