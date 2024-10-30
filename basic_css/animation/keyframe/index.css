@@ -15,17 +15,84 @@ body {
 }
 
 img {
+  display: block;
   width: 250px;
   height: 150px;
+}
+
+.cloud1 {
   animation-name: fly;
   animation-duration: 3s;
+  animation-fill-mode: both;
+  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+}
+
+.cloud2 {
+  animation-name: fly;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud3 {
+  animation: fly 5s both infinite linear, jump 2s 2s infinite linear;
+}
+
+.cloud4 {
+  transform: translateX(-200px);
+  transform-origin: 10px 10px;
+  animation: drop 0.5s ease forwards, swing 2s 0.5s ease forwards;
 }
 
 @keyframes fly {
   from {
-    transform: translateX(0);
+    transform: translateX(-200px);
   }
   to {
-    transform: translateX(500px);
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes jump {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes drop {
+  0%{
+    opacity: 0;
+  }
+  70%{
+    transform: translateX(300px);
+  }
+  100%{
+    transform: translateX(150px);
+    opacity: 1;
+  }
+}
+
+@keyframes swing {
+  0%{
+    transform: translateX(150px) rotateZ(0deg);
+  }
+  40%{
+    transform: translateX(150px) rotateZ(90deg);
+  }
+  70%{
+    transform: translateX(150px) rotateZ(70deg);
+  }
+  100%{
+    transform: translateX(150px) rotateZ(45deg);
   }
 }
