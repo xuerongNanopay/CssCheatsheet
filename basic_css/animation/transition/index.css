@@ -27,4 +27,10 @@ img {
   line-height: 0px;
   border-radius: 50px;
   cursor: pointer;
+  transition: background 1s, transform 0.3s 1s, background-color 1s ease-in-out;
+}
+
+.circle:hover {
+  background-color: salmon;
+  transform: rotate(360deg);
 }
