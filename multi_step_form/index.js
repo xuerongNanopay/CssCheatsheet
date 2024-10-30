@@ -1,4 +1,5 @@
 (function() {
+  const maxPage = 4;
   let curPage = 1;
   const prevBtn = document.querySelector(".form .footer .prev");
   const nextBtn = document.querySelector(".form .footer .next");
@@ -8,7 +9,7 @@
     nextBtn.disabled = false;
     if ( curPage === 1 ) {
       prevBtn.disabled = true;
-    } else if ( curPage === 4 ) {
+    } else if ( curPage === maxPage ) {
       nextBtn.disabled = true;
     }
 
