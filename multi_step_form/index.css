@@ -13,8 +13,13 @@ body {
   background: #eee;
   font-family: sans-serif;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  /* Use flex instead of grid, grid will cause padding issue in form body. */
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -93,7 +98,7 @@ body {
 
 .form .steps .step {
   width: 100%;
-  padding: 15px 5px 15px 5px;
+  padding: 15px 10px 15px 10px;
   overflow: hidden;
 }
 
@@ -114,7 +119,7 @@ body {
   margin-top: 20px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .form .steps .step .grid {
     grid-template-columns: 1fr;
   }
