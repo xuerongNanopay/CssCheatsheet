@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightskyblue;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100lvw;
+}
+
+img {
+  width: 250px;
+  height: 150px;
+}
+
+.circle {
+  margin: 0 auto;
+  width: 100px;
+  background-color: pink;
+  color: white;
+  padding: 50px 0;
+  line-height: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+}
