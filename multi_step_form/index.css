@@ -19,17 +19,19 @@ body {
 
 .container {
   background: #fff;
-  /* width: 375px; */
+  width: 70%;
 }
-@media all and (max-width: 375px) {
+@media all and (max-width: 600px) {
   .container {
-    width: 375px;
+    width: 90%;
   }
 }
 
 .form{
-  max-width: var(--max-form-width, 700px);
-  min-width: var(--min-form-width, 375px);
+  width: 100%;
+  margin: 0 auto;
+  /* max-width: var(--max-form-width, 700px); */
+  /* min-width: var(--min-form-width, 375px); */
 }
 
 .form .header {
@@ -91,7 +93,7 @@ body {
 
 .form .steps .step {
   width: 100%;
-  padding: 15px 10px 15px 10px;
+  padding: 15px 5px 15px 5px;
   overflow: hidden;
 }
 
@@ -112,7 +114,7 @@ body {
   margin-top: 20px;
 }
 
-@media all and (max-width: 575px) {
+@media all and (max-width: 600px) {
   .form .steps .step .grid {
     grid-template-columns: 1fr;
   }
