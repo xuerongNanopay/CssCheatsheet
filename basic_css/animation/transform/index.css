@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightskyblue;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100lvw;
+}
+
+img {
+  width: 250px;
+  height: 150px;
+}
+
+/* img {
+  transform: translateX(-300px);
+} */
+
+/* img {
+  transform: scale(2);
+} */
+
+/* img {
+  transform: rotateZ(45deg);
+} */
+
+img {
+  transform: rotateZ(45deg) translateY(-200px) scale(1.5);
+}
