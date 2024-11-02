@@ -3,3 +3,23 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #222;
+}
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: lime;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
