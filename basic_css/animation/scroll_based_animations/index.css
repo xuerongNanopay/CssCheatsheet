@@ -6,7 +6,6 @@
 
 body {
   background-color: #333;
-  width: 200vw;
 }
 
 .scroll-watcher {
@@ -19,9 +18,26 @@ body {
   scale: 0 1;
   transform-origin: left;
   animation: scroll-watcher linear;
-  animation-timeline: scroll(x);
+  animation-timeline: scroll();
 }
 
 @keyframes scroll-watcher {
   to { scale: 1 1; }
+}
+
+.cloud1 {
+  display: block;
+  margin: 0 auto;
+}
+
+.cloud1 {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-start: 0px;
+  animation-range-end: 500px;
+}
+
+@keyframes fade-in {
+  from { scale: 0.8; opacity: 0; }
+  to { scale: 1; opacity: 1; }
 }
