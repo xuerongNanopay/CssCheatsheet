@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  height: auto;
+}
+
+.center > button {
+  font-size: 1.25em;
+  background-color: darkolivegreen;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: 0;
+  border-radius: .5rem;
+}
+
+.center > button:hover {
+  background-color: darkgreen;
+}
