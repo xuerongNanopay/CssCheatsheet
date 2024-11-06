@@ -8,6 +8,10 @@ a, button {
   cursor: pointer;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .wrapper {
   display: grid;
   place-items: center;
@@ -26,4 +30,137 @@ a, button {
 
 .center > button:hover {
   background-color: darkgreen;
+}
+
+#notification-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.notification {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  animation: popIn 200ms ease-in-out forwards;
+}
+
+.notification.dismiss {
+  animation: popOut 200ms ease-in-out forwards;
+}
+
+.notification .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.notification .icon {
+  width: 30px;
+  height: 30px;
+  background: #ddd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.notification .seperator {
+  height: 40px;
+  width: 1px;
+  background: #ccc;
+}
+
+.notification .message {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  gap: 0.2em;
+  height: 100%;
+}
+
+.notification .message h2 {
+  font-size: 0.8em;
+  color: #222;
+}
+
+.notification.success {
+  background: #e6f3e6;
+  border: 1px solid #5cd15c;
+}
+
+.notification.success .icon {
+  background: #5cd15c;
+}
+
+.notification.error {
+  background: #fff3ee;
+  border: 1px solid #bb674b;
+}
+
+.notification.error .icon {
+  background: #bb674b;
+}
+
+
+.notification.warning {
+  background: #f6f6e0;
+  border: 1px solid #abab54;
+}
+
+.notification.warning .icon {
+  background: #abab54;
+}
+
+
+.notification.info {
+  background: #e7f5fb;
+  border: 1px solid #5291ac;
+}
+
+.notification.info .icon {
+  background: #5291ac;
+}
+
+
+.notification .message p {
+  font-size: 0.85em;
+}
+
+@keyframes popIn {
+  0% {
+    left: 100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes popOut {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  100% {
+    left: 100px;
+    opacity: 0;
+  }
 }
