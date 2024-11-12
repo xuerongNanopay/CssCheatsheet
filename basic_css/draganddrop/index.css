@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+body {
+  background: #e9c178;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  background: #fff;
+  width: 98%;
+  max-width: 500px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  border: 1px solid #555;
+}
+
+.box .list {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em;
+}
+
+.box .list .item {
+  padding: .5em;
+  border: 1px solid #bbb;
+  border-radius: .5em;
+  font-size: 15px;
+  height: max-height;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  overflow: hidden;
+}
+
+.box .list .item img {
+  border-radius: 50%;
+}
+
+.box .list .item.drag-active {
+  border: 1px solid #e1c178;
+  background: #fff;
+}
+
+.box .list.hovered {
+  border: 1px dashed #888;
+  background: #fbfbfb;
+}
