@@ -24,7 +24,7 @@ a, button {
   cursor: pointer;
 }
 
-.sidebar {
+#sidebar {
   position: fixed;
   width: 200px;
   background: #fff;
@@ -32,16 +32,24 @@ a, button {
   border: none;
   border-right: 1px solid #eee;
   padding-top: 0.5rem;
-  translate: 0 0;
+  translate: -200px 0;
+  transition: translate 300ms ease-in-out, display 300ms ease-in-out allow-discrete;
 }
 
-.sidebar ul {
+#sidebar:popover-open {
+  translate: 0 0;
+  @starting-style {
+    translate: -200px 0;
+  }
+}
+
+#sidebar ul {
   list-style: none;
   display: grid;
   padding: 0 .5em;
 }
 
-.sidebar ul li {
+#sidebar ul li {
   display: flex;
   padding: .65em;
   align-items: center;
@@ -52,27 +60,27 @@ a, button {
   transition: background 150ms ease-in-out;
 }
 
-.sidebar ul li span {
+#sidebar ul li span {
   color: #555;
 }
 
-.sidebar ul li.active,
-.sidebar ul li:hover {
+#sidebar ul li.active,
+#sidebar ul li:hover {
   background: #e0defb;
   font-weight: 500;
 }
 
-.sidebar ul li.active span,
-.sidebar ul li:hover span{
+#sidebar ul li.active span,
+#sidebar ul li:hover span{
   color: #111;
 }
 
-.sidebar ul li i {
+#sidebar ul li i {
   color: #4334e5;
   font-weight: 600;
 }
 
-.sidebar hr {
+#sidebar hr {
   margin: .5em 0;
   border: none;
   border-top: 1px solid #ddd;
