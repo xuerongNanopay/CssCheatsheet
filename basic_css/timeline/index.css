@@ -48,6 +48,18 @@ body {
 
 .container:nth-child(odd) {
   left:0;
+
+  & .container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #FFF;
+    right: -15px;
+  }
 }
 
 .container:nth-child(even) {
@@ -55,6 +67,19 @@ body {
 
   & img {
     left: -20px;
+  }
+
+  /* very interesting to create arrow */
+  & .container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #FFF;
+    left: -15px;
   }
 }
 
